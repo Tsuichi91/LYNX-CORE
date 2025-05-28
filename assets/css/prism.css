@@ -1,0 +1,76 @@
+    body {
+      margin: 0;
+      font-family: 'Syncopate', sans-serif;
+      background: url('../Logos/PRISM_Logo.png') no-repeat center center fixed;
+      background-size: contain;
+      background-color: rgba(0, 0, 0, 0.75);
+      background-blend-mode: overlay;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: #ff66cc;
+      text-shadow: 0 0 10px #ff66cc;
+    }
+    .band-logo {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .band-logo img {
+      width: 300px;
+      max-width: 80%;
+    }
+    .band-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 1.5rem;
+    }
+    .band-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .band-menu a:hover {
+      background: white;
+      color: black;
+    }
+    .band-intro {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 800px;
+    }
+    .band-intro h2 {
+      font-size: 1.8rem;
+      background: linear-gradient(to right, #6ec6ff, #f0e6ff, #f44336);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .band-intro p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #ddd;
+    }
