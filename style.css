@@ -7,7 +7,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       color: white;
     }
 
@@ -67,7 +67,9 @@
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Orbitron', sans-serif;
       background: linear-gradient(90deg, pink, lightblue, lightgreen, lavender);
       background-clip: text;
       -webkit-background-clip: text;
