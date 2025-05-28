@@ -27,7 +27,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 80px;
   filter: drop-shadow(0 0 10px #fff);
 }
 
@@ -124,15 +124,17 @@ nav ul li a:hover {
   color: white;
   padding: 0 1rem;
   margin-bottom: 1rem;
+  margin-top: 120px;
+  text-align: center;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   max-width: 600px;
 }
 
@@ -143,6 +145,7 @@ section.featured {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2cm;
 }
 
 .artist-tile {
