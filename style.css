@@ -39,3 +39,21 @@
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+
+.slogan {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowGlow 3s linear infinite;
+}
+
+@keyframes rainbowGlow {
+  0% { filter: drop-shadow(0 0 2px red); }
+  25% { filter: drop-shadow(0 0 2px orange); }
+  50% { filter: drop-shadow(0 0 2px green); }
+  75% { filter: drop-shadow(0 0 2px blue); }
+  100% { filter: drop-shadow(0 0 2px violet); }
+}
