@@ -55,8 +55,8 @@
       transition: 0.3s;
     }
     .band-menu a:hover {
-      background: white;
-      color: black;
+      background: #0e0e0e;
+      color: white;
     }
     .band-intro {
       text-align: center;
