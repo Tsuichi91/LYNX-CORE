@@ -1,0 +1,75 @@
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 8rem auto 4rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 12px #ff66cc;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .timeline {
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .timeline-entry {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline-entry strong {
+      color: #ff66cc;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo img {
+      height: 100px;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 10px white);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: text-shadow 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      text-shadow: 0 0 10px #ffccff;
+    }
