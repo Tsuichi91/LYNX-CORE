@@ -1,101 +1,114 @@
-    body {
+<style>
+    * {
       margin: 0;
-      background: linear-gradient(to bottom, rgba(128, 0, 128, 0.25), rgba(0, 0, 0, 0.25));
-      color: #f0f0f0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo img {
-      width: 180px;
-      margin-top: 2rem;
-      filter: drop-shadow(0 0 15px #a066ff);
-      transition: filter 0.5s ease-in-out;
+      height: 50px;
+      filter: drop-shadow(0 0 10px #fff);
     }
 
-    .logo img:hover {
-      filter: drop-shadow(0 0 30px #e0aaff);
-    }
-
-    .slogan {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbowPulse 4s linear infinite;
-    }
-
-    @keyframes rainbowPulse {
-      0% { filter: drop-shadow(0 0 3px red); }
-      25% { filter: drop-shadow(0 0 3px orange); }
-      50% { filter: drop-shadow(0 0 3px green); }
-      75% { filter: drop-shadow(0 0 3px blue); }
-      100% { filter: drop-shadow(0 0 3px violet); }
-    }
-
-    .main-nav {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      background-color: #004466;
-    }
-
-    .main-nav ul {
+    nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      gap: 2rem;
     }
 
-    .main-nav li a {
+    nav ul li a {
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      display: block;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s;
     }
 
-    .main-nav li a:hover {
-      background-color: #006699;
-      border-radius: 5px;
+    nav ul li a:hover {
+      color: #ffcc00;
     }
 
-    main h2 {
-      margin-top: 2rem;
-    }
-
-    .tiles {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .tile {
-      width: 200px;
-      height: 200px;
-      background-color: #006699;
+    .hero {
+      background: url('hero-placeholder.jpg') center center / cover no-repeat;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+      text-align: center;
       color: white;
-      font-weight: bold;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    section.featured {
+      background-color: #111;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .artist-tile {
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .tile:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+    .artist-tile:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .artist-tile img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .artist-tile h3 {
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
     }
 
     footer {
-      margin-top: 3rem;
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #ccc;
     }
+  </style>
