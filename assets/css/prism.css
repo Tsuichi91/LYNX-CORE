@@ -3,7 +3,7 @@
       font-family: 'Syncopate', sans-serif;
       background: url('../Logos/PRISM_Logo.png') no-repeat center center fixed;
       background-size: contain;
-      background-color: #0e0e0e
+      background-color: black
       background-blend-mode: overlay;
       color: white;
     }
@@ -55,7 +55,7 @@
       transition: 0.3s;
     }
     .band-menu a:hover {
-      background: #0e0e0e;
+      background: black;
       color: white;
     }
     .band-intro {
