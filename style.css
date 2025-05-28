@@ -1,182 +1,158 @@
+body {
+      margin: 0;
+      padding: 0;
+      background: url('Logos/Lynxcore_Logo.png') center center / cover no-repeat fixed;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      flex-wrap: wrap;
+    }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
-}
+    .logo img {
+      height: 120px;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 0 10px white);
+    }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .logo img:hover {
+      filter: drop-shadow(0 0 20px white);
+      animation: blink 0.6s step-start infinite;
+    }
 
-.logo img {
-  height: 80px;
-  filter: drop-shadow(0 0 10px #fff);
-}
+    @keyframes blink {
+      50% {
+        opacity: 0.5;
+      }
+    }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 1001;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
 
-.menu-toggle span {
-  background: white;
-  height: 3px;
-  width: 25px;
-  margin: 4px 0;
-  transition: all 0.3s ease;
-}
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: text-shadow 0.3s ease;
+    }
 
-nav {
-  flex-grow: 1;
-}
+    nav ul li a:hover {
+      text-shadow: 0 0 10px #ffccff;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  transition: all 0.3s ease;
-}
+    .hero {
+      text-align: center;
+      margin-top: 3rem;
+    }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #fff;
+      animation: glitter 2s infinite;
+    }
 
-nav ul li a:hover {
-  color: #ffcc00;
-}
+    .hero p {
+      font-size: 1.2rem;
+      background: linear-gradient(90deg, pink, lightblue, lightgreen, lavender);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowGlow 4s linear infinite;
+    }
 
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 999;
-}
+    @keyframes glitter {
+      0%, 100% { text-shadow: 0 0 10px white; }
+      50% { text-shadow: 0 0 20px #ffccff; }
+    }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
+    @keyframes rainbowGlow {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 2rem;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 1rem;
-    border-radius: 8px;
-    width: max-content;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+    .featured {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
 
-  nav ul.show {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .artist-tile {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
 
-  .overlay.show {
-    display: block;
-  }
-}
+    .artist-tile:hover {
+      transform: scale(1.05);
+    }
 
-.hero {
-  background: url('Logos/Lynxcore_Logo.png') center center / cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  color: white;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
-  margin-top: 120px;
-  text-align: center;
-}
+    .artist-tile img {
+      width: 70%;
+      height: auto;
+    }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
-}
+    .circle-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
 
-.hero p {
-  font-size: 1rem;
-  max-width: 600px;
-}
+    .circle-text svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
 
-section.featured {
-  background-color: #111;
-  padding: 2rem 2rem 4rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2cm;
-}
+    .circle-text text {
+      fill: #ffccff;
+      font-size: 12px;
+      letter-spacing: 1px;
+      animation: spin 20s linear infinite;
+    }
 
-.artist-tile {
-  background-color: #222;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-.artist-tile:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-.artist-tile img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
 
-.artist-tile h3 {
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-footer {
-  background-color: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
+      .featured {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
