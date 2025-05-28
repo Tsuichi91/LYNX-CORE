@@ -25,6 +25,9 @@
       align-items: center;
     }
 
+   .logo {
+     flex-grow: 1;
+   }
     .logo img {
       height: 50px;
       filter: drop-shadow(0 0 10px #fff);
@@ -33,7 +36,8 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     nav ul li a {
