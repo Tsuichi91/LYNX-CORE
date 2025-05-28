@@ -78,3 +78,42 @@
       margin-bottom: 1rem;
       box-shadow: 0 0 12px rgba(255, 105, 180, 0.8);
     }
+
+.logo img {
+  height: 50px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px white);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 10px #ffccff;
+}
+
