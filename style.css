@@ -114,7 +114,7 @@ nav ul li a:hover {
 }
 
 .hero {
-  background: url('hero-placeholder.jpg') center center / cover no-repeat;
+  background: url('Logos/Lynxcore_Logo.png') center center / cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
