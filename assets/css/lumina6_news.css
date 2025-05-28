@@ -1,4 +1,4 @@
-    body {
+body {
       background: #0e0e0e;
       color: #fff;
       font-family: 'Unbounded', sans-serif;
@@ -11,9 +11,8 @@
       align-items: center;
       padding: 1rem 2rem;
       background: rgba(0, 0, 0, 0.8);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: relative;
+      z-index: 10;
     }
     nav ul {
       list-style: none;
