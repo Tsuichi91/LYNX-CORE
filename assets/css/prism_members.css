@@ -17,29 +17,34 @@ body {
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin: 0;
       padding: 0;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
     nav ul li a:hover {
       color: #ff66cc;
       text-shadow: 0 0 10px #ff66cc;
     }
     .logo img {
-      height: 50px;
+      height: 80px;
+      max-width: 100%;
+    }
+    main {
+      padding: 2rem 2rem 4rem;
     }
     .member-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      padding: 3rem 2rem;
+      margin-top: 2rem;
     }
     .member-card {
       background: #2a2a2a;
@@ -52,6 +57,8 @@ body {
     .member-card img {
       width: 100%;
       height: auto;
+      max-height: 400px;
+      object-fit: cover;
       border-radius: 16px;
       margin-bottom: 1rem;
     }
@@ -62,7 +69,7 @@ body {
     .member-card p {
       margin: 0.3rem 0;
       color: #ccc;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
     .member-card:hover {
       transform: translateY(-6px);
