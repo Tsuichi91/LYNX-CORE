@@ -1,0 +1,131 @@
+body {
+  background-color: #000;
+  background-image: url('../Logos/Q.TRAINEES_Logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: #fff;
+  font-family: 'Unbounded', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 8px #ffccff;
+}
+
+.center-content {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.motto {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #f8c8dc, #ff4e50, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem auto 2rem auto;
+  max-width: 800px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  background: #111;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Unbounded', sans-serif;
+}
+
+form button {
+  margin-top: 2rem;
+  padding: 0.7rem 2rem;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
