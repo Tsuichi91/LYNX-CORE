@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LU●MINA6 Music Player</title>
+  <link rel="stylesheet" href="../assets/css/lumina6_music.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../assets/logos/Lynxcore_Logo.png" alt="Lynxcore Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../about.html">About</a></li>
+        <li><a href="../lumina6.html">LU●MINA6</a></li>
+        <li><a href="../prism.html">PR!SM</a></li>
+        <li><a href="../qtrainees.html">Q.TRAINEES</a></li>
+        <li><a href="../../gallery.html">Gallery</a></li>
+        <li><a href="../../music.html">Music</a></li>
+        <li><a href="../../news.html">News</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+        <li><a href="../../forum.html">Forum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="../assets/logos/LUMINA6_Logo.png" alt="LU●MINA6 Logo">
+      <h1>Feel the Light, Feel the Sound</h1>
+    </section>
+
+    <section class="music-player">
+      <audio id="audio-player" controls>
+        <source src="../assets/lumina6/music/song1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="playlist">
+        <ul>
+          <li data-src="../assets/lumina6/music/song1.mp3">Starlight Code</li>
+          <li data-src="../assets/lumina6/music/song2.mp3">Electric Bloom</li>
+          <li data-src="../assets/lumina6/music/song3.mp3">No Sleep in Neon</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/lumina6_music.js"></script>
+</body>
+</html>
