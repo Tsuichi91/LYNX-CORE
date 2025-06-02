@@ -1,145 +1,135 @@
-/* CSS file: lumina6_music_player.css */
-
 body {
   background-color: #121212;
   color: #fff;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Unbounded', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-header {
+.player-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo img {
-  height: 60px;
-  transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 10px #1DB954);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-nav ul li a:hover {
-  color: #1DB954;
-  text-shadow: 0 0 10px #1DB954;
-}
-
-.hero {
-  text-align: center;
+  justify-content: center;
   padding: 2rem;
 }
 
-.hero img {
-  width: 200px;
-}
-
-.hero h1 {
-  font-size: 2rem;
-  background: linear-gradient(90deg, #1DB954, #fff, #1DB954);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 10px rgba(29, 185, 84, 0.3);
-  animation: glow 4s linear infinite;
-}
-
-@keyframes glow {
-  0% { filter: drop-shadow(0 0 5px #1DB954); }
-  50% { filter: drop-shadow(0 0 15px #fff); }
-  100% { filter: drop-shadow(0 0 5px #1DB954); }
-}
-
-.music-player {
-  max-width: 600px;
-  margin: 2rem auto;
-  background-color: #181818;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.cover-container img {
-  width: 100%;
+.album-cover {
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+
+.song-info {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.song-info span {
+  display: block;
+  margin: 0.2rem 0;
 }
 
 .controls {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  align-items: center;
+  gap: 20px;
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-.controls button {
-  background: none;
+.control-btn {
+  background-color: #1db954;
   border: none;
-  font-size: 1.5rem;
-  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s, color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.controls button:hover {
-  color: #1DB954;
-  transform: scale(1.2);
+.control-btn:hover {
+  background-color: #1ed760;
+  transform: scale(1.1);
 }
 
-.progress-container {
-  background: #333;
-  height: 6px;
-  border-radius: 3px;
-  margin-top: 1rem;
-  position: relative;
+.control-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
   overflow: hidden;
+  margin: 1rem 0;
 }
 
-#progress-bar {
-  background: #1DB954;
+.progress {
   height: 100%;
+  background: #1db954;
   width: 0;
   transition: width 0.3s;
 }
 
-.volume-container {
-  margin-top: 1rem;
+.time {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.volume-container input[type="range"] {
-  width: 80%;
-  accent-color: #1DB954;
-}
-
-#equalizer {
+  justify-content: space-between;
   width: 100%;
-  height: 100px;
-  margin-top: 1rem;
-  background-color: #111;
-  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.equalizer {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.bar {
+  width: 4px;
+  height: 20px;
+  background: #1db954;
+  animation: equalizer 1s infinite;
+}
+
+.bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes equalizer {
+  0%, 100% {
+    height: 20px;
+  }
+  50% {
+    height: 40px;
+  }
+}
+
+/* Shuffle & Repeat toggle */
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 0 5px;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+  color: #1db954;
 }
